@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Soundarya Samboju – IT Recruiter</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" 
+    crossorigin="anonymous"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    :root {
+      --bg: #ffffff; --fg: #2e3b4e; --primary: #005f73; --accent: #0a9396;
+      --sec: #f0f4f8; --alt: #e8f6f5;
+    }
+    [data-theme="dark"] {
+      --bg: #2e3b4e; --fg: #f0f4f8; --primary: #0a9396; --accent: #94d2bd;
+      --sec: #334150; --alt: #3a4a59;
+    }
+    *,*::before,*::after { box-sizing:border-box; }
+    body {
+      margin:0; font-family:Poppins,sans-serif; background:var(--bg); color:var(--fg);
+      scroll-behavior:smooth;
+    }
+    nav{ position:sticky; top:0; background:var(--sec); padding:1rem;
+      box-shadow:0 2px rgba(0,0,0,0.1);}
+    nav ul{ display:flex; justify-content:center; gap:2rem;}
+    nav a{text-decoration:none;font-weight:600;color:var(--fg);position:relative;}
+    nav a::after{content:"";position:absolute;bottom:0;left:50%;width:0;height:2px;
+      background:var(--primary);transition:.3s;}
+    nav a:hover::after{left:0;width:100%;}
+
+    header{
+      background:url('https://static.vecteezy.com/system/resources/thumbnails/004/616/954/small/hr-recruitment-business-concept-free-photo.jpg') center/cover no-repeat;
+      position:relative; min-height:60vh; display:flex;flex-direction:column;
+      align-items:center;justify-content:center;text-align:center;
+    }
+    header::before{
+      content:"";position:absolute;inset:0;background:rgba(0,0,0,0.5);
+    }
+    .hero{position:relative;z-index:1;}
+    .hero img{width:130px;height:130px;border-radius:50%;border:4px solid #fff;margin-bottom:1rem;}
+    .hero h1{color:#fff;font-size:2.8rem;margin:0;}
+    .hero p{color:#fff;font-size:1.1rem;margin:0.5rem 0;}
+    .cta{margin-top:1rem;padding:0.6rem 1.4rem;background:var(--accent);
+      color:#fff;border-radius:4px;text-decoration:none;font-weight:600;}
+    .cta:hover{background:var(--primary);}
+
+    #theme-toggle{position:absolute;top:1rem;right:1rem;
+      background:#fff;color:var(--primary);border:none;
+      border-radius:50%;padding:8px;cursor:pointer;z-index:2;}
+
+    main{display:grid;grid-template-columns:1fr;gap:2rem;
+      padding:2rem;max-width:900px;margin:auto;}
+    @media(min-width:768px){
+      main{grid-template-columns:1fr 2fr;}
+      .full{grid-column:1/-1;}
+    }
+    section{background:var(--sec);padding:1.5rem;border-radius:8px;}
+    section:nth-of-type(even){background:var(--alt);}
+    h2{margin-top:0;color:var(--accent);font-size:1.4rem;border-bottom:2px solid var(--accent);}
+    ul{padding-left:1rem; margin:0;}
+    .skills span{display:inline-block;background:var(--accent);
+      color:#fff;padding:6px 12px;border-radius:20px;margin:4px 4px 0 0;}
+
+    footer{text-align:center;padding:1rem;background:var(--sec);}
+    
+    @media print{
+      nav,#theme-toggle,.cta{display:none;}
+      body{background:#fff;color:#000;font-size:12pt;}
+      main{padding:0;}
+    }
+  </style>
+</head>
+<body>
+  <nav><ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#personal">Personal</a></li>
+  </ul></nav>
+
+  <header>
+    <button id="theme-toggle">🌙</button>
+    <div class="hero">
+      <img src="https://media.licdn.com/dms/image/v2/D5603AQEI3xZ06wos1Q/profile-displayphoto-shrink_200_200/B56ZSdNE6HHEAY-/0/1737804239754?e=1758153600&v=beta&t=cCfjIJQIx_f9bBjv7OFRJ_l5XvnbBWYvVZc_GiSqJzk" alt="Soundarya Samboju">
+      <h1>Soundarya Samboju</h1>
+      <p>IT Recruiter • Hyderabad<br>
+        <a href="mailto:soundaryasamboju1619@gmail.com" style="color:#fff;text-decoration:underline;">Email</a> • 
+        <a href="https://www.linkedin.com/in/..." target="_blank" style="color:#fff;text-decoration:underline;">LinkedIn</a>
+      </p>
+      <a href="assets/soundarya-samboju-resume.docx" class="cta" download>Download PDF</a>
+    </div>
+  </header>
+
+  <main id="resume-content">
+    <section id="summary" class="full">
+      <h2>Professional Summary</h2>
+      <p>Full‑cycle IT recruiter with B.Tech in ECE and 6‑month experience. Specialised in sourcing, screening, vendor management, offer negotiation, and onboarding top tech talent for corporate clients.</p>
+    </section>
+    <section id="skills">
+      <h2>Skills & Technical</h2>
+      <div class="skills">
+        <span>Resume Sourcing</span><span>Interview Coordination</span>
+        <span>Job Portals (Naukri, LinkedIn)</span><span>Client/Vendor Mgmt</span>
+        <span>Negotiation</span><span>Java • .NET • SQL</span><span>Tech Trends</span>
+      </div>
+    </section>
+    <section id="experience" class="full">
+      <h2>Work Experience</h2>
+      <article>
+        <h3>Associate IT Recruiter – Lussotech LLC</h3>
+        <time>Dec 2024 – Present</time>
+        <ul>
+          <li>Sourced & screened candidates via portals & LinkedIn.</li>
+          <li>Conducted telephonic interviews, coordinated with clients.</li>
+          <li>Managed job postings, candidate database & communication.</li>
+          <li>Negotiated offers balancing expectations & budgets.</li>
+        </ul>
+      </article>
+    </section>
+    <section id="education">
+      <h2>Education</h2>
+      <article>
+        <p><strong>B.Tech, Electronics & Communication Engineering</strong> – VBIT (2012‑2016) | 76%</p>
+        <p><strong>Intermediate</strong> – A.B.V Junior College (2010‑2012) | 84%</p>
+        <p><strong>SSC</strong> – Ekashila High School (2010) | 86%</p>
+      </article>
+    </section>
+    <section id="personal">
+      <h2>Personal Information</h2>
+      <p><strong>DOB:</strong> 16 Sep 1993<br>
+      <strong>Address:</strong> Gajularamaram, Hyderabad<br>
+      <strong>Languages:</strong> Telugu, English</p>
+    </section>
+  </main>
+
+  <footer>© 2025 Soundarya Samboju</footer>
+
+  <script>
+    // Theme toggle
+    const t=document.getElementById('theme-toggle'),r=document.documentElement,s=localStorage.getItem('theme');
+    if(s) r.setAttribute('data-theme',s);
+    t.textContent = r.getAttribute('data-theme')==='dark'?'☀️':'🌙';
+    t.onclick=()=>{
+      const n=r.getAttribute('data-theme')==='dark'?'light':'dark';
+      r.setAttribute('data-theme',n); localStorage.setItem('theme',n);
+      t.textContent = n==='dark'?'☀️':'🌙';
+    };
+
+<script>
+    // PDF download
+    document.getElementById('download-resume').onclick=e=>{
+      e.preventDefault();
+      html2pdf().set({margin:0.3,unit:'in',format:'letter',orientation:'portrait'}).from(document.getElementById('resume-content')).save();
+    };
+</script>
+</body>
+</html>
